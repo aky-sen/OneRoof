@@ -1,0 +1,1157 @@
+:root {
+    --primary: #FF6B00;
+    --secondary: #FFE5D3;
+    --dark: #1A1A1A;
+    --light: #FFFFFF;
+    --gradient: linear-gradient(135deg, #FF6B00, #FF8F40);
+    --gradient-dark: linear-gradient(135deg, #1A1A1A, #333333);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.nav-brand img.logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    padding: 10rem 2rem 6rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.1), transparent 60%);
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 90%;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Buttons */
+.cta-button, .cta-button-outline, .contact-btn, .filter-pill {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Primary Button Style */
+.cta-button.primary, .contact-btn {
+    background: var(--gradient);
+    color: var(--light);
+    border: none;
+}
+
+.cta-button.primary:hover, .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+.cta-button.primary:active, .contact-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Secondary Button Style */
+.cta-button.secondary, .cta-button-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.cta-button.secondary:hover, .cta-button-outline:hover {
+    background: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.2);
+}
+
+.cta-button.secondary:active, .cta-button-outline:active {
+    transform: translateY(-1px);
+}
+
+/* Filter Pills Style */
+.filter-pill {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light);
+}
+
+.filter-pill:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.filter-pill.active {
+    background: var(--gradient);
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* Hover Animation for all buttons */
+.cta-button::before, 
+.cta-button-outline::before, 
+.contact-btn::before,
+.filter-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.cta-button:hover::before, 
+.cta-button-outline:hover::before, 
+.contact-btn:hover::before,
+.filter-pill:hover::before {
+    left: 100%;
+}
+
+/* Remove any conflicting button styles */
+.contact-btn {
+    font-size: 0.9rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Cards */
+.step-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect for the title */
+.step-card:hover h3 {
+    transform: scale(1.1);
+    color: var(--light);
+}
+
+/* Optional: Add a subtle glow effect on hover */
+.step-card:hover .step-icon {
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 8rem 2rem;
+    background: radial-gradient(circle at bottom left, rgba(255, 107, 0, 0.1), transparent 60%);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Agency Section */
+.agencies {
+    padding: 8rem 2rem;
+}
+
+.section-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.modern-filters {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--light);
+    font-size: 1rem;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-pills {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-pill.active {
+    background: var(--gradient);
+    border-color: transparent;
+}
+
+/* Footer */
+.footer {
+    padding: 6rem 2rem 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 4rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-column h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--light);
+}
+
+/* Add these new styles for the hero image section */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 20px 40px rgba(255, 107, 0, 0.2));
+}
+
+.hero-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape-1 {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at center, rgba(255, 107, 0, 0.2), transparent);
+    top: -20px;
+    right: 20%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at center, rgba(255, 107, 0, 0.15), transparent);
+    bottom: 10%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite 1s;
+}
+
+.shape-3 {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at center, rgba(255, 107, 0, 0.1), transparent);
+    top: 30%;
+    right: 5%;
+    animation: float 7s ease-in-out infinite 0.5s;
+}
+
+/* Update the floating animation */
+@keyframes float {
+    0% { 
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateY(-20px) scale(1.05);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Add these styles for the agency cards */
+.agency-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.agency-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.agency-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.agency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.agency-logo {
+    height: 40px;
+    width: auto;
+}
+
+.agency-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.agency-rating i {
+    color: #FFD700;
+}
+
+.agency-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--light);
+}
+
+.agency-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    min-height: 60px;
+}
+
+.agency-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background: rgba(255, 107, 0, 0.1);
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.agency-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.contact-btn {
+    background: var(--gradient);
+    color: var(--light);
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+}
+
+/* Add hover effects for interactive elements */
+.agency-card:hover .contact-btn {
+    background: var(--light);
+    color: var(--primary);
+}
+
+.agency-card:hover .tag {
+    background: rgba(255, 107, 0, 0.2);
+}
+
+/* Add these new styles for the agency directory page */
+
+.agency-directory-header {
+    padding: 10rem 2rem 4rem;
+    background: radial-gradient(circle at top right, rgba(255, 107, 0, 0.1), transparent 60%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.agency-directory-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.agency-directory-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+}
+
+.advanced-filters {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.filter-groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.8rem;
+    color: var(--light);
+    font-size: 1rem;
+}
+
+/* Agency Card Expanded */
+.agency-directory {
+    padding: 4rem 2rem;
+}
+
+.agency-grid-expanded {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.agency-card-expanded {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.agency-card-expanded:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.agency-card-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.agency-meta {
+    flex-grow: 1;
+}
+
+.agency-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stat i {
+    color: var(--primary);
+}
+
+.review-count {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-range .label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price-range .amount {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 4rem;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn:hover {
+    border-color: var(--primary);
+}
+
+.page-btn.active {
+    background: var(--gradient);
+    border-color: transparent;
+}
+
+/* Add these styles for the view-all link */
+.view-all-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Update contact button to work with anchor tags */
+.contact-btn {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Add these new styles for quick filters */
+.quick-filters {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quick-filters h3 {
+    color: var(--light);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.quick-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.quick-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quick-filter-btn:hover {
+    background: rgba(255, 107, 0, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.quick-filter-btn i {
+    color: var(--primary);
+}
+
+.quick-filter-btn.active {
+    background: var(--gradient);
+    border-color: transparent;
+}
+
+/* Active Filters Styles */
+.active-filters {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.active-filters h4 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.active-filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.active-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 107, 0, 0.1);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.active-filter i {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.active-filter i:hover {
+    transform: scale(1.2);
+}
+
+.clear-filters {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-filters:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Update select styles */
+.filter-group select {
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: var(--light);
+    cursor: pointer;
+    appearance: none;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FF6B00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+}
+
+.filter-group select:hover {
+    border-color: var(--primary);
+}
+
+.filter-group select optgroup {
+    background: var(--dark);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.filter-group select option {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.5rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    /* Header & Navigation */
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    /* Agency Cards */
+    .agency-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .agency-meta {
+        text-align: center;
+    }
+
+    .agency-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Filters */
+    .filter-groups {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Header */
+    .agency-directory-header h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .agency-directory-header p {
+        text-align: center;
+    }
+
+    /* Filters */
+    .quick-filter-buttons {
+        justify-content: center;
+    }
+
+    .filter-groups {
+        grid-template-columns: 1fr;
+    }
+
+    /* Agency Cards */
+    .agency-card-expanded {
+        padding: 1.5rem;
+    }
+
+    .agency-card-body {
+        text-align: center;
+    }
+
+    .agency-tags {
+        justify-content: center;
+    }
+
+    .agency-card-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .action-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Pagination */
+    .pagination {
+        gap: 0.25rem;
+    }
+
+    .page-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Header */
+    .agency-directory-header {
+        padding: 8rem 1rem 4rem;
+    }
+
+    /* Search */
+    .search-bar input {
+        font-size: 0.9rem;
+        padding: 0.8rem 2.5rem;
+    }
+
+    /* Quick Filters */
+    .quick-filter-btn {
+        width: calc(50% - 0.5rem);
+        justify-content: center;
+    }
+
+    /* Active Filters */
+    .active-filter-tags {
+        justify-content: center;
+    }
+
+    .active-filter {
+        font-size: 0.8rem;
+    }
+
+    /* Agency Cards */
+    .agency-card-expanded {
+        margin: 0 1rem;
+    }
+
+    .agency-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+
+    /* Hide some pagination items on mobile */
+    .page-btn:nth-child(4) {
+        display: none;
+    }
+}
+
+/* Landscape Mode */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .agency-directory-header {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .quick-filters {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .agency-card-expanded {
+        padding: 1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .filter-group select optgroup,
+    .filter-group select option {
+        background: var(--dark);
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .agency-logo {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .advanced-filters,
+    .pagination,
+    .action-buttons {
+        display: none;
+    }
+
+    .agency-card-expanded {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+} 

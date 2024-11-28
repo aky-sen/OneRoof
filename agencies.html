@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Agencies - Agency Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://i.ibb.co/kMqZJ54/a-modern-logo-for-a-startup-named-oneroof-a-digita-rl-NC5ra-QL-x-RYYJoyg-IWg-n-F-2d-Vz-MSricj-AZIti.png" alt="Logo" class="logo">
+                <a href="index.html">Agency Marketplace</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="#" class="active">Agencies</a>
+                <button class="cta-button-outline">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Agency Directory Header -->
+    <section class="agency-directory-header">
+        <div class="container">
+            <h1 class="gradient-text">Explore Top Agencies</h1>
+            <p>Find and connect with the perfect agency for your project</p>
+            
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <!-- Quick Filters -->
+                <div class="quick-filters">
+                    <h3>Popular Filters</h3>
+                    <div class="quick-filter-buttons">
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-palette"></i>
+                            UI/UX Design
+                        </button>
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-code"></i>
+                            Web Development
+                        </button>
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-mobile-alt"></i>
+                            Mobile Apps
+                        </button>
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-bullhorn"></i>
+                            Digital Marketing
+                        </button>
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-paint-brush"></i>
+                            Branding
+                        </button>
+                        <button class="quick-filter-btn">
+                            <i class="fas fa-chart-line"></i>
+                            SEO & Growth
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Existing search and filters -->
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search agencies by name, expertise, or location...">
+                </div>
+                
+                <div class="filter-groups">
+                    <div class="filter-group">
+                        <label>Service Type</label>
+                        <select>
+                            <option value="">All Services</option>
+                            <optgroup label="Design">
+                                <option value="ui-ux">UI/UX Design</option>
+                                <option value="branding">Branding & Identity</option>
+                                <option value="graphic">Graphic Design</option>
+                            </optgroup>
+                            <optgroup label="Development">
+                                <option value="web-dev">Web Development</option>
+                                <option value="mobile-dev">Mobile Development</option>
+                                <option value="ecommerce">E-commerce</option>
+                            </optgroup>
+                            <optgroup label="Marketing">
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="seo">SEO</option>
+                                <option value="social-media">Social Media</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Budget Range</label>
+                        <select>
+                            <option value="">All Budgets</option>
+                            <option value="0-5000">Under $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000-25000">$10,000 - $25,000</option>
+                            <option value="25000-50000">$25,000 - $50,000</option>
+                            <option value="50000+">$50,000+</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Project Timeline</label>
+                        <select>
+                            <option value="">Any Timeline</option>
+                            <option value="less-1-month">Less than 1 month</option>
+                            <option value="1-3-months">1-3 months</option>
+                            <option value="3-6-months">3-6 months</option>
+                            <option value="6-plus-months">6+ months</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Active Filters -->
+                <div class="active-filters">
+                    <h4>Active Filters:</h4>
+                    <div class="active-filter-tags">
+                        <span class="active-filter">
+                            UI/UX Design
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <span class="active-filter">
+                            $5,000 - $10,000
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <button class="clear-filters">Clear All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agency Grid -->
+    <section class="agency-directory">
+        <div class="container">
+            <div class="agency-grid-expanded">
+                <!-- Agency Card with Extended Info -->
+                <div class="agency-card-expanded">
+                    <div class="agency-card-header">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7d_Agency%20Logo%201.svg" alt="Digital Minds" class="agency-logo">
+                        <div class="agency-meta">
+                            <h3>Digital Minds</h3>
+                            <div class="agency-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                                <span class="review-count">(128 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="cta-button primary">View Profile</button>
+                    </div>
+                    <div class="agency-card-body">
+                        <p class="agency-description">Full-service digital agency specializing in branding and web development. We create exceptional digital experiences that drive results.</p>
+                        <div class="agency-stats">
+                            <div class="stat">
+                                <i class="fas fa-briefcase"></i>
+                                <span>150+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>25-50 Team Size</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Est. 2015</span>
+                            </div>
+                        </div>
+                        <div class="agency-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Development</span>
+                            <span class="tag">Branding</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Mobile Apps</span>
+                        </div>
+                    </div>
+                    <div class="agency-card-footer">
+                        <div class="price-range">
+                            <span class="label">Starting from</span>
+                            <span class="amount">$5,000</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="cta-button secondary">
+                                <i class="far fa-bookmark"></i> Save
+                            </button>
+                            <button class="cta-button primary">Contact Agency</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Growth Hackers Agency -->
+                <div class="agency-card-expanded">
+                    <div class="agency-card-header">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7e_Agency%20Logo%202.svg" alt="Growth Hackers" class="agency-logo">
+                        <div class="agency-meta">
+                            <h3>Growth Hackers</h3>
+                            <div class="agency-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                                <span class="review-count">(95 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="cta-button primary">View Profile</button>
+                    </div>
+                    <div class="agency-card-body">
+                        <p class="agency-description">Data-driven marketing agency focused on scaling startups and SMEs. Specialists in growth marketing, PPC, and conversion optimization.</p>
+                        <div class="agency-stats">
+                            <div class="stat">
+                                <i class="fas fa-briefcase"></i>
+                                <span>200+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>15-25 Team Size</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Est. 2018</span>
+                            </div>
+                        </div>
+                        <div class="agency-tags">
+                            <span class="tag">Marketing</span>
+                            <span class="tag">PPC</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Analytics</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </div>
+                    <div class="agency-card-footer">
+                        <div class="price-range">
+                            <span class="label">Starting from</span>
+                            <span class="amount">$3,000</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="cta-button secondary">
+                                <i class="far fa-bookmark"></i> Save
+                            </button>
+                            <button class="cta-button primary">Contact Agency</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Hub Agency -->
+                <div class="agency-card-expanded">
+                    <div class="agency-card-header">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7f_Agency%20Logo%203.svg" alt="Creative Hub" class="agency-logo">
+                        <div class="agency-meta">
+                            <h3>Creative Hub</h3>
+                            <div class="agency-rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                                <span class="review-count">(156 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="cta-button primary">View Profile</button>
+                    </div>
+                    <div class="agency-card-body">
+                        <p class="agency-description">Award-winning creative agency specializing in brand storytelling and visual identity. We transform brands through innovative design and strategy.</p>
+                        <div class="agency-stats">
+                            <div class="stat">
+                                <i class="fas fa-briefcase"></i>
+                                <span>300+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>30-40 Team Size</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Est. 2012</span>
+                            </div>
+                        </div>
+                        <div class="agency-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Design</span>
+                            <span class="tag">Video</span>
+                            <span class="tag">Animation</span>
+                            <span class="tag">Strategy</span>
+                        </div>
+                    </div>
+                    <div class="agency-card-footer">
+                        <div class="price-range">
+                            <span class="label">Starting from</span>
+                            <span class="amount">$7,500</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="cta-button secondary">
+                                <i class="far fa-bookmark"></i> Save
+                            </button>
+                            <button class="cta-button primary">Contact Agency</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Innovators Agency -->
+                <div class="agency-card-expanded">
+                    <div class="agency-card-header">
+                        <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf80_Agency%20Logo%204.svg" alt="Tech Innovators" class="agency-logo">
+                        <div class="agency-meta">
+                            <h3>Tech Innovators</h3>
+                            <div class="agency-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                                <span class="review-count">(88 reviews)</span>
+                            </div>
+                        </div>
+                        <button class="cta-button primary">View Profile</button>
+                    </div>
+                    <div class="agency-card-body">
+                        <p class="agency-description">Cutting-edge software development agency specializing in custom solutions, AI integration, and digital transformation projects.</p>
+                        <div class="agency-stats">
+                            <div class="stat">
+                                <i class="fas fa-briefcase"></i>
+                                <span>120+ Projects</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-user-friends"></i>
+                                <span>40-60 Team Size</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-clock"></i>
+                                <span>Est. 2016</span>
+                            </div>
+                        </div>
+                        <div class="agency-tags">
+                            <span class="tag">Development</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Cloud</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                    </div>
+                    <div class="agency-card-footer">
+                        <div class="price-range">
+                            <span class="label">Starting from</span>
+                            <span class="amount">$15,000</span>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="cta-button secondary">
+                                <i class="far fa-bookmark"></i> Save
+                            </button>
+                            <button class="cta-button primary">Contact Agency</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">
+                    <i class="fas fa-ellipsis-h"></i>
+                </button>
+                <button class="page-btn">10</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Footer content same as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

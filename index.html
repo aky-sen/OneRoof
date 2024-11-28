@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneRoof</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Modern font - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar with gradient background -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="https://i.ibb.co/kMqZJ54/a-modern-logo-for-a-startup-named-oneroof-a-digita-rl-NC5ra-QL-x-RYYJoyg-IWg-n-F-2d-Vz-MSricj-AZIti.png" alt="Logo" class="logo">
+                OneRoof 
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="agencies.html">Agencies</a>
+                <button class="cta-button-outline">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Hero Section with Gradient -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="gradient-text">Find Your Perfect Agency Partner</h1>
+                <p class="hero-subtitle">Connect with top-tier agencies that transform your vision into reality</p>
+                <div class="cta-group">
+                    <a href="agencies.html" class="cta-button primary">Browse Agencies</a>
+                    <a href="#how-it-works" class="cta-button secondary">Learn More</a>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Verified Agencies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/X559ZTZ/image-removebg-preview.png" 
+                     alt="Hero Illustration" 
+                     class="floating-animation">
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <h2 class="section-title gradient-text">How It Works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>1. Search</h3>
+                <p>Browse our curated list of top agencies</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>2. Connect</h3>
+                <p>Match with agencies that fit your needs</p>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>3. Launch</h3>
+                <p>Start your project with confidence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modified Agency List Section -->
+    <section id="agencies" class="agencies">
+        <div class="section-header">
+            <h2 class="gradient-text">Featured Agencies</h2>
+            <div class="modern-filters">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search" placeholder="Search agencies...">
+                </div>
+                <div class="filter-pills">
+                    <button class="filter-pill active">All</button>
+                    <button class="filter-pill">Design</button>
+                    <button class="filter-pill">Development</button>
+                    <button class="filter-pill">Marketing</button>
+                </div>
+            </div>
+            <div class="view-all-link">
+                <a href="agencies.html" class="cta-button secondary">View All Agencies</a>
+            </div>
+        </div>
+
+        <div id="agency-list" class="agency-grid">
+            <div class="agency-card">
+                <div class="agency-header">
+                    <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7d_Agency%20Logo%201.svg" alt="Digital Minds" class="agency-logo">
+                    <div class="agency-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                </div>
+                <h3>Digital Minds</h3>
+                <p class="agency-description">Full-service digital agency specializing in branding and web development.</p>
+                <div class="agency-tags">
+                    <span class="tag">Design</span>
+                    <span class="tag">Development</span>
+                    <span class="tag">Branding</span>
+                </div>
+                <div class="agency-footer">
+                    <span class="price">Starting from $5,000</span>
+                    <a href="agencies.html" class="contact-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="agency-card">
+                <div class="agency-header">
+                    <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7e_Agency%20Logo%202.svg" alt="Growth Hackers" class="agency-logo">
+                    <div class="agency-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.8</span>
+                    </div>
+                </div>
+                <h3>Growth Hackers</h3>
+                <p class="agency-description">Data-driven marketing agency focused on scaling startups and SMEs.</p>
+                <div class="agency-tags">
+                    <span class="tag">Marketing</span>
+                    <span class="tag">SEO</span>
+                    <span class="tag">PPC</span>
+                </div>
+                <div class="agency-footer">
+                    <span class="price">Starting from $3,000</span>
+                    <a href="agencies.html" class="contact-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="agency-card">
+                <div class="agency-header">
+                    <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf7f_Agency%20Logo%203.svg" alt="Creative Hub" class="agency-logo">
+                    <div class="agency-rating">
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                </div>
+                <h3>Creative Hub</h3>
+                <p class="agency-description">Award-winning creative agency specializing in brand storytelling.</p>
+                <div class="agency-tags">
+                    <span class="tag">Branding</span>
+                    <span class="tag">Design</span>
+                    <span class="tag">Video</span>
+                </div>
+                <div class="agency-footer">
+                    <span class="price">Starting from $7,500</span>
+                    <a href="agencies.html" class="contact-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="agency-card">
+                <div class="agency-header">
+                    <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94bd55e6cf80_Agency%20Logo%204.svg" alt="Tech Innovators" class="agency-logo">
+                    <div class="agency-rating">
+                        <i class="fas fa-star"></i>
+                        <span>4.7</span>
+                    </div>
+                </div>
+                <h3>Tech Innovators</h3>
+                <p class="agency-description">Specialized in custom software development and digital transformation.</p>
+                <div class="agency-tags">
+                    <span class="tag">Development</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">AI</span>
+                </div>
+                <div class="agency-footer">
+                    <span class="price">Starting from $10,000</span>
+                    <a href="agencies.html" class="contact-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a94d6c5e6cf71_Logotype-2.svg" 
+                     alt="Logo" 
+                     class="logo">
+                <p>Connecting visionaries with exceptional agencies</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Blog</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
